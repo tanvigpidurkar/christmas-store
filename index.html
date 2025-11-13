@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holly & Pine — Christmas Gifts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Snow canvas (global) -->
+  <canvas id="snowCanvas"></canvas>
+
+  <!-- Header with lights + nav + music toggle -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">Holly & Pine</a>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="controls">
+      <button class="music-btn" id="musicBtn">🔇</button>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- HERO with parallax layers -->
+  <main>
+    <section class="hero">
+      <div class="hero-layer layer-back" data-speed="0.2"></div>
+      <div class="hero-layer layer-mid" data-speed="0.5"></div>
+
+      <div class="hero-content container">
+        <h1 class="glow">Feel the Christmas Magic</h1>
+        <p class="muted">Curated gifts, cozy decor, complimentary gift wrap.</p>
+        <div class="cta-row">
+          <a class="btn pulse" href="shop.html">Shop Now</a>
+          <a class="btn ghost" href="#collections">Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="collections container">
+      <h2>✨ Featured Collections</h2>
+      <div class="grid">
+        <article class="card hover-lift">
+          <img src="assets/wreath.jpg" alt="Wreath">
+          <h3>Decor & Wreaths</h3>
+          <p>Bring festive charm to every home.</p>
+          <a class="btn small" href="shop.html?cat=decor">Explore</a>
+        </article>
+
+        <article class="card hover-lift">
+          <img src="assets/giftbox.jpg" alt="Giftbox">
+          <h3>Gifts Under ₹1500</h3>
+          <p>Thoughtful surprises for your loved ones.</p>
+          <a class="btn small" href="shop.html?cat=under1500">Shop</a>
+        </article>
+
+        <article class="card hover-lift">
+          <img src="assets/ornament.jpg" alt="Ornament">
+          <h3>Tree Ornaments</h3>
+          <p>Handcrafted ornaments to treasure.</p>
+          <a class="btn small" href="shop.html?cat=ornaments">See More</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner container">
+      <h2>🎁 Free gift wrapping + tracked shipping</h2>
+      <p class="muted">Order by December 15 for guaranteed delivery before Dec 24.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Holly & Pine — Made with ❤️ for the holidays</p>
+    </div>
+  </footer>
+
+  <!-- Background music (place file assets/christmas_music.mp3) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/christmas_music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Holly & Pine</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* --- Page-specific enhancements --- */
+      main.container {
+        text-align: center;
+        padding-top: 6rem;
+        animation: fadeIn 1.2s ease-in-out both;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #fff;
+        text-shadow: 0 0 15px #ff4d6d, 0 0 30px #ff758f;
+        margin-bottom: 0.5rem;
+      }
+
+      .muted {
+        color: #b0bec5;
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem 0 3rem;
+      }
+
+      .team-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 2rem 1rem;
+        color: #fff;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .team-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+      }
+
+      .team-card h4 {
+        margin-top: 1rem;
+        color: #ffb3c1;
+        font-size: 1.2rem;
+      }
+
+      .team-card p {
+        color: #e0f7fa;
+        font-size: 0.95rem;
+      }
+
+      /* Footer glow */
+      footer.site-footer {
+        margin-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        padding: 2rem 0;
+        color: #ccc;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ❄️ Snow Canvas -->
+    <canvas id="snowCanvas"></canvas>
+
+    <!-- 🎄 Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">Holly & Pine</a>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="controls">
+      <button class="music-btn" id="musicBtn">🔇</button>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </div>
+</header>
+
+
+    <!-- 💫 About Content -->
+    <main class="container">
+      <h1>Our Story</h1>
+      <p class="muted">
+        At <strong>Holly & Pine</strong>, we believe Christmas is more than a
+        season — it’s a feeling. We craft every ornament, wreath, and gift with
+        love and sustainable materials, bringing warmth and joy to your
+        celebrations.
+      </p>
+
+      <section class="team-grid">
+        <div class="team-card fade-in">
+          🎄
+          <h4>Handmade with Love</h4>
+          <p>Each product is carefully handcrafted by local artisans.</p>
+        </div>
+        <div class="team-card fade-in" style="animation-delay: 0.2s">
+          🎁
+          <h4>Complimentary Wrapping</h4>
+          <p>
+            All gifts come beautifully wrapped — ready to place under the tree.
+          </p>
+        </div>
+        <div class="team-card fade-in" style="animation-delay: 0.4s">
+          🚚
+          <h4>Fast & Tracked Delivery</h4>
+          <p>Enjoy reliable shipping with updates every step of the way.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 🌟 Footer -->
+    <footer class="site-footer fade-in">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Holly & Pine | Crafted with ❤️ by
+          <strong>Tanvi Pidurkar</strong>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 🎶 Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="assets/christmas_music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
